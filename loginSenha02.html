@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio while 02</title>
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <script>
+        let senhav ="hugo"
+        let msg = ""
+        let tentativas = 0
+
+
+        while (tentativas < 3) {
+            let senhaUsuario = prompt("Digite a senha. " + " Números de tentativas" + tentativas)
+            if(senhaUsuario === senhav){
+                tentativas = 4
+                msg= "Seja bem vindo"
+            }else{
+                tentativas++
+                msg = "Error 404"
+            }
+        }
+        document.getElementById("resultado").innerHTML = msg
+
+            
+            
+        
+        
+
+    </script>
+    
+</body>
+</html>

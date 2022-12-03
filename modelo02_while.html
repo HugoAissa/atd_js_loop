@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo While</title>
+</head>
+<body>
+    <h1>Usando o While</h1>
+    <div id="resultado"></div>
+    <script>
+        //while = enquanto 
+        //while = literal
+        //for = numerica
+        let matricula = 1;
+
+        let nota1 = 0;
+        let nota2= 0;
+        let nota3= 0;
+        let nota4= 0;
+        let resul= ""
+
+
+
+        
+        while (matricula != 0 ) {
+            matricula = Number(prompt("Digite a Matricula, ou zero para sair"))
+            if (matricula != 0 ) {
+    
+   
+
+            nota1= Number(prompt("Digite a primeira nota do(/a) "))
+            nota2= Number(prompt("Digite a segunda nota do(/a) "))
+            nota3= Number(prompt("Digite a terceira nota do(/a) "))
+            nota4= Number(prompt("Digite a quarta nota do(/a) "))
+
+            resul += "  <br>"+"Matricula: "+matricula+"<br>"+ "Nota 1: " + nota1 + "<br>" + "Nota 2: " +nota2 + "<br>" + "Nota 3: " + nota3 + "<br>"+ "Nota 4: " + nota4
+            document.getElementById("resultado").innerHTML = resul
+
+        }
+            
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="resultado"></div>
+    <script>
+        let nump 
+        let testeQ = 3
+        let contador = 1
+        let resul = ""
+        let resul1 = ""
+        let resul2=""
+        let total=""
+        let totalrepr=0
+
+
+        for (let contador = 0; contador <= 3 ; contador++) {
+            nump = prompt("Digite a numeração do produto")
+            testeQ = prompt("Digite a Qualidade do produto")
+            if (testeQ == 1){ 
+
+                resul += "Numero da peça :"  +nump + " Peça Aprovada" +
+                "</br>" 
+
+
+   
+                console.log(contador)
+            }else if(testeQ == 2) {
+
+                resul += "Numero da peça :" + nump + " Peça Reprovada"+ 
+                "</br>" 
+                resul1 = "Total de peças Reprovadas:"+total
+                totalrepr++
+
+  
+            }
+
+        }
+        console.log(totalrepr)
+
+    
+        document.getElementById("resultado").innerHTML += resul + resul1 + resul2 +totalrepr
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

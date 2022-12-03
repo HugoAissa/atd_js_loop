@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        let nome; 
+        let numC; 
+        let mediaCalc;
+        let s ;
+        let xp;
+        let contador = 0;
+
+
+        while (contador <= 1) {
+            nome = prompt("Digite o nome do Candidato");
+            numC = prompt("Digite a Matricula do Candidato");
+            mediaCalc= prompt("Digite a Idade do Candidato");
+            s = prompt("Digite M se é masculino F se é feminino");
+            xp = prompt("Digite S se tem experiencia N se não tem experiencia");
+
+
+            
+
+
+
+            totalcan = "O total de candidato é " + contador;
+            
+            if (mediaCalc < 18) {
+                menorMaior = "Menor de Idade";
+                
+            }else{
+                menorMaior = "Maior de Idade";
+            }
+
+            if (xp == "S") {
+                can = "Tem Experiencia";
+                
+            }else{
+                can = "Não tem Experiencia";
+            }
+
+
+            if (s == "M") {
+                se = "Masculino" ;
+                
+            }else{
+                se = "Feminino";
+            }
+            document.getElementById("resultado").innerHTML=" O total de candidatos é " + totalcan + "</br>" + " A media de idade é " + calc
+            document.getElementById("resultado").innerHTML+=" Numero do Candidato: " + numC + " O candidato é " + menorMaior + " Ele " + can + " Sexo:" + se
+ 
+            ++contador
+            contador=3;
+            calc = Number(mediaCalc / 3);
+            
+            
+            
+        }
+
+
+
+
+    </script>
+</body>
+</html>
