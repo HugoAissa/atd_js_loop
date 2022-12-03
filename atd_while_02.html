@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atividade 02</title>
 </head>
-
 <body>
-    <div id="resultado"></div>
-    <div id="total"></div>
-    <div id="total2"></div>
+    <p id="resultado"></p>
+    <p id="calcMedia"></p>
+    <p id="resultado1"></p>
+    
+
     <script>
-        let nump ;
-        let testeQ = 3;
         let contador = 0;
-        let resul = "";
-        let resul1 = "";
-        let resul2="";
-        let resul3="";
-        let totalrepr=1;
-        let totalapro=1;
-
-
-
-
-        for (let contador = 0; contador < 5 ; contador++) {
-            nump = prompt("Digite a numeração do produto");
-            testeQ = prompt("Digite a Qualidade do produto");
-            if (testeQ == 1){ 
-
-                resul += "Numero da peça :" + nump + " Peça Aprovada" + "</br>" ;
-                resul3 = "Total de peças Aprovadas: " + totalapro ;
-                totalapro++;
-
-
-
-            }  
-            
-             if (testeQ == 2) { 
-
-                resul2 += "Numero da peça :" + nump + " Peça Reprovada"+ 
-                "</br>" ;
-                resul4 = "Total de peças Reprovadas: "+ totalrepr;
-
-                totalrepr++
-
-  
-            } 
-          }
-
-        
-        console.log(resul3)
-
-
-        document.getElementById("resultado").innerHTML += resul+resul2  ;
-        document.getElementById("total").innerHTML +=resul1   +  resul3  + resul4;
+        let numC ="";
+        let idade=0;
+        let sexo="";
+        let xp="";
+        let menorMaior=""
+        let idadeMaiorQtd=0;
+        let idadeMaiorSoma= 0;
+        let idadeMenorQtd=0;
+        let idadeMenorSoma  =0;
+        let se="";
+        let masQtd = ""
+        let feQtd =""
+        let totalXp = 0
+        let naoXp = 0
+        let exp = ""
+        let calc = 0
+      
      
-
-
-
         
+        while (contador < 3) {
+            numC = prompt("Numeração do candidato");
+            idade = Number( prompt("Digite a idade do candidato"));
+            sexo = prompt("Digite o sexo do candidato" + "\n" + "1 = Masculino 2 = Feminino");
+            xp = prompt("Digite a experiencia do candidato (1 = Sim ou 2 = Não)" );
 
+            if (idade < 18 ) {
+                menorMaior =" Não. ";
+                idadeMenorSoma += idade;
+                idadeMenorQtd++
 
+                
+            }else{
+                menorMaior  = " Sim.";
+                idadeMaiorSoma += idade;
+                idadeMaiorQtd++;
+            }
 
+            if (sexo == "1") {
 
+                masQtd++
+                
+                se = " Homem. "
+                
+            }else if(sexo == "2"){
+                feQtd++
+                se =  "Mulher. "  
+            }
+            if (xp == "2" ) {
+                totalXp++
+                exp = " Não tem experiencia. "
+                
+            }else{
+                naoXp++
+                exp1 = " Tem experiencia. " 
 
+            } 
+            calc = (idadeMaiorSoma+idadeMenorSoma) / 3
+           
+       
+            console.log(calc)
+            contador++;
 
+            document.getElementById("resultado1").innerHTML += "A numeração do candidato  é " + numC + "."+ " O cadidato é maior de idade? " + menorMaior+ " Ele é " +se + exp + "<br>"
+            document.getElementById("resultado").innerHTML ="Total de candidatos: " + masQtd + "<br>" + " Total de candidatas: " +feQtd+"<br>" + "Media de candidatos" + calc
+ 
+            
+        }
 
     </script>
-
+    
 </body>
-
 </html>
