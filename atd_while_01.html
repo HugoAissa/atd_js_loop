@@ -10,43 +10,58 @@
 
 <body>
     <div id="resultado"></div>
+    <div id="total"></div>
+    <div id="total2"></div>
     <script>
-        let nump 
-        let testeQ = 3
-        let contador = 1
-        let resul = ""
-        let resul1 = ""
-        let resul2=""
-        let total=""
-        let totalrepr=0
+        let nump ;
+        let testeQ = 3;
+        let contador = 0;
+        let resul = "";
+        let resul1 = "";
+        let resul2="";
+        let resul3="";
+        let totalrepr=1;
+        let totalapro=1;
 
 
-        for (let contador = 0; contador <= 3 ; contador++) {
-            nump = prompt("Digite a numeração do produto")
-            testeQ = prompt("Digite a Qualidade do produto")
+
+
+        for (let contador = 0; contador < 5 ; contador++) {
+            nump = prompt("Digite a numeração do produto");
+            testeQ = prompt("Digite a Qualidade do produto");
             if (testeQ == 1){ 
 
-                resul += "Numero da peça :"  +nump + " Peça Aprovada" +
-                "</br>" 
+                resul += "Numero da peça :" + nump + " Peça Aprovada" + "</br>" ;
+                resul3 = "Total de peças Aprovadas: " + totalapro ;
+                totalapro++;
 
 
-   
-                console.log(contador)
-            }else if(testeQ == 2) {
 
-                resul += "Numero da peça :" + nump + " Peça Reprovada"+ 
-                "</br>" 
-                resul1 = "Total de peças Reprovadas:"+total
+            }  
+            
+             if (testeQ == 2) { 
+
+                resul2 += "Numero da peça :" + nump + " Peça Reprovada"+ 
+                "</br>" ;
+                resul4 = "Total de peças Reprovadas: "+ totalrepr;
+
                 totalrepr++
 
   
-            }
+            } 
+          }
 
-        }
-        console.log(totalrepr)
+        
+        console.log(resul3)
 
-    
-        document.getElementById("resultado").innerHTML += resul + resul1 + resul2 +totalrepr
+
+        document.getElementById("resultado").innerHTML += resul+resul2  ;
+        document.getElementById("total").innerHTML +=resul1   +  resul3  + resul4;
+     
+
+
+
+        
 
 
 
