@@ -8,6 +8,7 @@
 </head>
 <body>
     <p id="resultado"></p>
+    <p id="calcMedia"></p>
     <p id="resultado1"></p>
     
 
@@ -60,13 +61,13 @@
                 feQtd++
                 se =  "Mulher. "  
             }
-            if (xp == "2" ) {
+            if (xp == "1" ) {
                 totalXp++
-                exp = " Não tem experiencia. "
+                exp = " Tem experiencia. "
                 
-            }else{
+            }else if (xp == "2"){
                 naoXp++
-                exp1 = " Tem experiencia. " 
+                exp = " Não Tem experiencia. " 
 
             } 
             calc = (idadeMaiorSoma+idadeMenorSoma) / 3
